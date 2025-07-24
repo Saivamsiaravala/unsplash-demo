@@ -28,12 +28,14 @@ body main .query .btn-search {
   border-radius: 0.25rem;
   border: none;
   height: 1.5rem;
+  background-color: gray;
+  color: white;
+  height: 1.5rem;
+  cursor: pointer;
 }
 body main .query .btn-search:hover {
-  background-color: black;
-}
-body main .query .btn-search:hover .icon {
-  color: white;
+  background-color: white;
+  color: black;
 }
 body main .query .btn-search .icon {
   font-size: 1rem;
@@ -55,12 +57,25 @@ body main .results .images .list-image .list-image-item .image {
      object-fit: contain;
   width: 80%;
   border-radius: 10%;
-  filter: grayscale(10%);
   transition: filter 0.4s ease;
+  filter: brightness(90%);
 }
 body main .results .images .list-image .list-image-item .image:hover {
   transform: scale(0.99);
-  filter: grayscale(0%);
+  filter: brightness(100%);
+}
+@media (min-width: 576px) {
+  body main .results .images .list-image {
+    grid-template-columns: 1fr 1fr;
+  }
+  body main .results .images .list-image .list-image-item {
+    height: 100%;
+  }
+  body main .results .images .list-image .list-image-item .image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 20rem;
+  }
 }
 @media (min-width: 768px) {
   body main .results .images .list-image {
@@ -94,13 +109,22 @@ body main .results .pagination {
   align-items: center;
   margin: 1rem;
 }
-body main .results .pagination .active {
+body main .results .pagination .btn-page {
   background-color: gray;
+  color: white;
+  height: 1.5rem;
+  cursor: pointer;
+  width: 2rem;
 }
 body main .results .pagination .btn-page:hover {
-  background-color: lightblue;
+  background-color: white;
+  color: black;
 }
 body main .results .pagination .btn {
   border-radius: 10%;
   border: none;
+}
+body main .results .pagination .active {
+  background-color: black;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
