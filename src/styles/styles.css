@@ -11,47 +11,62 @@ body header {
   font-size: 2rem;
   padding: 1rem;
 }
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 body main .input {
   background-color: lightgray;
   border-radius: 0.25rem;
   border: none;
-  border: 2px solid red;
+  height: 1.5rem;
 }
-body .btn-search {
-  background-color: blue;
+body main .btn-search {
+  background-color: gray;
   border-radius: 0.25rem;
   border: none;
-  border: 2px solid red;
+  height: 1.5rem;
 }
-body .results {
+body main .btn-search:hover {
+  background-color: black;
+}
+body main .btn-search:hover .icon {
+  color: white;
+}
+body main .btn-search .icon {
+  font-size: 1rem;
+}
+body main .results {
   padding: 1rem;
 }
-body .results .images .list-image {
+body main .results .images .list-image {
   display: grid;
   grid-template-columns: repeat(1, 2fr);
 }
-body .results .images .list-image .list-image-item {
+body main .results .images .list-image .list-image-item {
   list-style: none;
   width: 100%;
   margin: 1rem auto;
 }
-body .results .images .list-image .list-image-item .image {
+body main .results .images .list-image .list-image-item .image {
   -o-object-fit: contain;
      object-fit: contain;
   width: 80%;
 }
-body .results .pagination {
+body main .results .pagination {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-body .results .pagination .active {
+body main .results .pagination .active {
   background-color: gray;
 }
-body .results .pagination .btn-page:hover {
+body main .results .pagination .btn-page:hover {
   background-color: lightblue;
 }
-body .results .pagination .btn {
+body main .results .pagination .btn {
   border-radius: 10%;
   border: none;
 }/*# sourceMappingURL=styles.css.map */

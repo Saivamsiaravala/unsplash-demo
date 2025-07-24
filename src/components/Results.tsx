@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Images from "./Images";
 import Pagination from "./Pagination";
 
@@ -18,15 +18,10 @@ const Results = ({ query }: { query: string }) => {
         );
         const data = await response.json();
         setResults(data.results);
-        //log statement
-        // console.log(data.results);
         for (let i = 1; i <= Math.ceil(data.results.length / 6); i++) {
           dummyArray.push(i);
         }
         setPages(dummyArray);
-
-        //log statement
-        //console.log("Fetched results:", data);
       } catch (error) {
         console.log("Error fetching results:", error);
       }
@@ -51,4 +46,4 @@ const Results = ({ query }: { query: string }) => {
   );
 };
 
-export default Results;
+export default React.memo(Results);

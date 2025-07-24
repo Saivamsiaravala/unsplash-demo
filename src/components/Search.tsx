@@ -7,8 +7,6 @@ const Search = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = () => {
-    //log statement
-    //console.log("Searching for:", query);
     setSearchQuery(query);
   };
   return (
@@ -20,7 +18,7 @@ const Search = () => {
         className="input input-search"
       />
       <button type="submit" className="btn btn-search" onClick={handleSearch}>
-        <FaSearch />
+        <FaSearch className="icon" />
       </button>
       {searchQuery && <Results query={searchQuery} />}
     </>

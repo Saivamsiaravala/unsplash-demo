@@ -9,16 +9,10 @@ const Images = ({
   currentPage: number;
 }) => {
   const [images, setImages] = useState<UnsplashImage[]>();
-  //log statement
-  //console.log(results);
   useEffect(() => {
     setImages(results.slice((currentPage - 1) * 6, currentPage * 6));
-    //log statement
-    // console.log(results.slice((currentPage - 1) * 6, currentPage * 6));
-  }, [currentPage]);
+  }, [currentPage, results]);
 
-  //log statement
-  //console.log(currentPage);
   return (
     <div className="images">
       {images && (
@@ -40,4 +34,4 @@ const Images = ({
   );
 };
 
-export default React.memo(Images);
+export default Images;
