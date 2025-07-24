@@ -1,5 +1,22 @@
 @import "./variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@mixin responsiveness($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint==lg {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -56,11 +73,36 @@ body {
             }
           }
         }
+        @include responsiveness(md) {
+          .list-image {
+            grid-template-columns: 1fr 1fr 1fr;
+            .list-image-item {
+              height: 100%;
+              .image {
+                object-fit: cover;
+                height: 15rem;
+              }
+            }
+          }
+        }
+        @include responsiveness(lg) {
+          .list-image {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            .list-image-item {
+              height: 100%;
+              .image {
+                object-fit: cover;
+                height: 20rem;
+              }
+            }
+          }
+        }
       }
       .pagination {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        margin: 1rem;
         .active {
           background-color: gray;
         }

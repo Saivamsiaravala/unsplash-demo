@@ -18,7 +18,7 @@ const Results = ({ query }: { query: string }) => {
         );
         const data = await response.json();
         setResults(data.results);
-        for (let i = 1; i <= Math.ceil(data.results.length / 6); i++) {
+        for (let i = 1; i <= Math.ceil(data.results.length / 8); i++) {
           dummyArray.push(i);
         }
         setPages(dummyArray);

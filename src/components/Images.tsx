@@ -10,7 +10,7 @@ const Images = ({
 }) => {
   const [images, setImages] = useState<UnsplashImage[]>();
   useEffect(() => {
-    setImages(results.slice((currentPage - 1) * 6, currentPage * 6));
+    setImages(results.slice((currentPage - 1) * 8, currentPage * 8));
   }, [currentPage, results]);
 
   return (

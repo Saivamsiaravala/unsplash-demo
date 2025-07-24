@@ -55,10 +55,37 @@ body main .results .images .list-image .list-image-item .image {
      object-fit: contain;
   width: 80%;
 }
+@media (min-width: 768px) {
+  body main .results .images .list-image {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  body main .results .images .list-image .list-image-item {
+    height: 100%;
+  }
+  body main .results .images .list-image .list-image-item .image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 15rem;
+  }
+}
+@media (min-width: 1024px) {
+  body main .results .images .list-image {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  body main .results .images .list-image .list-image-item {
+    height: 100%;
+  }
+  body main .results .images .list-image .list-image-item .image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 20rem;
+  }
+}
 body main .results .pagination {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 1rem;
 }
 body main .results .pagination .active {
   background-color: gray;
