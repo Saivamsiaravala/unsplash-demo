@@ -12,29 +12,31 @@ body {
     padding: 1rem;
   }
   main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    .input {
-      background-color: lightgray;
-      border-radius: 0.25rem;
-      border: none;
-      height: 1.5rem;
-    }
-    .btn-search {
-      background-color: gray;
-      border-radius: 0.25rem;
-      border: none;
-      height: 1.5rem;
-      &:hover {
-        background-color: black;
-        .icon {
-          color: white;
-        }
+    .query {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      .input {
+        background-color: lightgray;
+        border-radius: 0.25rem;
+        border: none;
+        height: 1.5rem;
       }
-      .icon {
-        font-size: 1rem;
+      .btn-search {
+        background-color: gray;
+        border-radius: 0.25rem;
+        border: none;
+        height: 1.5rem;
+        &:hover {
+          background-color: black;
+          .icon {
+            color: white;
+          }
+        }
+        .icon {
+          font-size: 1rem;
+        }
       }
     }
 

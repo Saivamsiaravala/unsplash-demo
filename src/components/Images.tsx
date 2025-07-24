@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { UnsplashImage } from "../Type";
 
 const Images = ({

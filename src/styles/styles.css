@@ -11,31 +11,31 @@ body header {
   font-size: 2rem;
   padding: 1rem;
 }
-body main {
+body main .query {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
-body main .input {
+body main .query .input {
   background-color: lightgray;
   border-radius: 0.25rem;
   border: none;
   height: 1.5rem;
 }
-body main .btn-search {
+body main .query .btn-search {
   background-color: gray;
   border-radius: 0.25rem;
   border: none;
   height: 1.5rem;
 }
-body main .btn-search:hover {
+body main .query .btn-search:hover {
   background-color: black;
 }
-body main .btn-search:hover .icon {
+body main .query .btn-search:hover .icon {
   color: white;
 }
-body main .btn-search .icon {
+body main .query .btn-search .icon {
   font-size: 1rem;
 }
 body main .results {
