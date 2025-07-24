@@ -1,8 +1,12 @@
+import Search from "./components/Search";
+
 const App = () => {
   return (
     <div className="app-container">
       <header>Unsplash</header>
-      <main></main>
+      <main>
+        <Search />
+      </main>
     </div>
   );
 };

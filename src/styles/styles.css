@@ -8,5 +8,50 @@ body {
   text-align: center;
 }
 body header {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
+body main .input {
+  background-color: lightgray;
+  border-radius: 0.25rem;
+  border: none;
+  border: 2px solid red;
+}
+body .btn-search {
+  background-color: blue;
+  border-radius: 0.25rem;
+  border: none;
+  border: 2px solid red;
+}
+body .results {
+  padding: 1rem;
+}
+body .results .images .list-image {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+}
+body .results .images .list-image .list-image-item {
+  list-style: none;
+  width: 100%;
+  margin: 1rem auto;
+}
+body .results .images .list-image .list-image-item .image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 80%;
+}
+body .results .pagination {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body .results .pagination .active {
+  background-color: gray;
+}
+body .results .pagination .btn-page:hover {
+  background-color: lightblue;
+}
+body .results .pagination .btn {
+  border-radius: 10%;
+  border: none;
 }/*# sourceMappingURL=styles.css.map */
